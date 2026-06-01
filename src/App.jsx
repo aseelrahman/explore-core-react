@@ -7,21 +7,49 @@ import './App.css'
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>React core concepts</h1>
+      <Student />
+      <Student />
       <Person />
-      <Sports />
-      <Pet />
-      <Person />
-      <Sports />
-    </>
+      <Developer name='Mozumdar' tech='JS' gear='Laptop' />
+      <Developer name='Rajon' tech='Python' gear='Desktop' />
+      <Developer name='Sabana' tech='Java' gear='Tablet' />
+
+    </>  
+  )
+}
+
+function Developer(props){
+  console.log(props);
+  return(
+    <div style={{ border: '3px solid blue', padding: '10px', margin: '10px' }}>
+      <h3>Developer: {props.name}</h3>
+      <p>Technology: {props.tech}</p>
+      <p>Gear: {props.gear}</p>
+    </div>
+  )
+}
+
+
+function Student(){
+  return (
+    <div className='student'>
+      <p>Name: </p>
+      <p>Dept: </p>
+    </div>
   )
 }
 
 function Person(){
   const age = 17;
   const name = 'Jolil';
+  const personStyle = {
+    color: 'red',
+    fontSize: '20px',
+    textAlign: 'right',
+  }
   return(
-    <p>I am a person: {name}, age: {age}</p>
+    <p style={personStyle}>I am a person: {name}, age: {age}</p>
   )
 }
 
