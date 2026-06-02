@@ -14,8 +14,30 @@ function App() {
       <Developer name='Mozumdar' tech='JS' gear='Laptop' />
       <Developer name='Rajon' tech='Python' gear='Desktop' />
       <Developer name='Sabana' tech='Java' gear='Tablet' />
+      <Player name="Tamim" runs="5000"/>
+      <Player name="Mushi" runs="5000"/>
+      <Salami event="Roja Eid" amount="20"/>
+      <Salami event="Graduation" />
 
     </>  
+  )
+}
+
+function Salami({event, amount = 0}){
+  return(
+    <div className='student'>
+      <p>Salami for: {event}</p>
+      <p>Amount: ${amount}</p>
+    </div>
+  )
+}
+
+function Player({name, runs}){
+  return(
+    <div className='student'>
+      <h3>Name: {name}</h3>
+      <p>Runs: {runs}</p>
+    </div>
   )
 }
 
