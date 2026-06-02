@@ -4,11 +4,20 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+import ToDo from './Todo'
+
 function App() {
+
+  const time = 50;
+
   return (
     <>
       <h1>React core concepts</h1>
-      <Student />
+
+      <ToDo task='Learn React' isDone={true} time={time}/>
+      <ToDo task='Revise JS' isDone={false}/>
+      <ToDo task='Take a shower' isDone={true} time="100"/>
+      {/* <Student />
       <Student />
       <Person />
       <Developer name='Mozumdar' tech='JS' gear='Laptop' />
@@ -17,7 +26,7 @@ function App() {
       <Player name="Tamim" runs="5000"/>
       <Player name="Mushi" runs="5000"/>
       <Salami event="Roja Eid" amount="20"/>
-      <Salami event="Graduation" />
+      <Salami event="Graduation" /> */}
 
     </>  
   )
